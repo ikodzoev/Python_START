@@ -8,3 +8,18 @@
 4
 [1, 2, 6, 24]
 """
+
+N = int(input('Введите число: '))
+
+
+def getlist():
+    total = 1
+    current = 1
+    while True:
+        total = total * current
+        yield total
+        current = current + 1
+
+
+f = getlist()
+print([next(f) for i in range(N)])
