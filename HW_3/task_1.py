@@ -11,3 +11,12 @@
 [5, 1, 5, 2, 7, 11]
 14
 """
+
+getlist = []
+print('Введите числа через пробел: ')
+for element in input().split():
+    getlist.append(int(element))
+# print(getlist)
+sum_odd = sum(getlist[1::2])
+print(sum_odd)
+# print(type(sum_odd))
