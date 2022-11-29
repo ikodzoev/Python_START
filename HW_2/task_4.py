@@ -6,19 +6,19 @@
 Ввод: значение типа <int>
 Вывод: значение типа <int>
 """
-from random import randint
+import random
 
+rnd = random.Random()
+getlist = []
+n = int(input("Введите число N: "))
+for i in range(n):
+    getlist.append(rnd.randint(-n, n))
+print(getlist)
 
-def getlist():
-    i_list = []
-    for i in range(n):
-        i_list.append(randint(-n, n))
-    return i_list
-
-
-n = 50
-numbers = getlist()
-print(numbers)
-x = open('indexes.txt', 'r')
-output = numbers[int(x.readline())] * numbers[int(x.readline(2))]
+output = 1
+with open('indexes.txt', 'r') as data:
+    for line in data:
+        position = int(line)
+        if n > position >= -n:
+            output *= getlist[position]
 print(output)
