@@ -13,7 +13,7 @@
 """
 
 getlist = []
-print('Введите числа через пробел: ')
+print('Введите целые числа через пробел: ')
 for element in input().split():
     getlist.append(int(element))
 # print(getlist)
