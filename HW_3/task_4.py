@@ -14,3 +14,18 @@
 2
 10
 """
+
+number = int(input('Введите целое число: '))
+
+
+# не работает для отрицательных чисел, рекурсия:
+def dec_to_bin(number):
+    if number >= 1:
+        dec_to_bin(number // 2)
+    print(number % 2, end='')
+
+
+dec_to_bin(number)
+# работает и для отрицательных чисел:
+# bin_number = f"{number:b}"
+# print(bin_number)
