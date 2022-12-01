@@ -27,7 +27,12 @@ def diff():
             max_fract = buf
         elif buf < min_fract:
             min_fract = buf
-    res = (round((max_fract - min_fract), 2) * 10)
+    while int(max_fract) != max_fract:
+        max_fract *= 10
+    while int(min_fract) != min_fract:
+        min_fract *= 10
+
+    res = (round((max_fract - min_fract), 2))
     # print(f"max {max_fract}, min {min_fract}")
     return res
 
