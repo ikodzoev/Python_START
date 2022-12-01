@@ -13,3 +13,23 @@
 [2, 3, 5, 6]
 [12, 15]
 """
+
+print('Введите целые числа через пробел: ')
+getlist = []
+for element in input().split():
+    getlist.append(int(element))
+
+
+def mult_of_pair():
+    if len(getlist) % 2 != 0:
+        res = int(len(getlist) / 2) + 1
+    else:
+        res = int(len(getlist) / 2)
+
+    mult = []
+    for i in range(0, res):
+        mult.append(getlist[i] * getlist[len(getlist) - 1 - i])
+    return mult
+
+
+print(mult_of_pair())
