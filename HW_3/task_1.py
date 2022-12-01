@@ -17,6 +17,7 @@ print('Введите целые числа через пробел: ')
 for element in input().split():
     getlist.append(int(element))
 # print(getlist)
+# print(getlist[1::2])
 sum_odd = sum(getlist[1::2])
 print(sum_odd)
 # print(type(sum_odd))
