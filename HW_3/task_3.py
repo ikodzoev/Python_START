@@ -14,27 +14,22 @@ getlist = []
 for element in input().split(','):
     getlist.append(float(element))
 
-
 # getlist = [1.1, 1.2, 3.1, 5, 10.01]
 
+max_fract = 0
+min_fract = 1
+for i in getlist:
+    buf = round(i % 1, 2)
+    if buf > max_fract:
+        max_fract = buf
+    elif buf < min_fract:
+        min_fract = buf
+while int(max_fract) != max_fract:
+    max_fract *= 10
+while int(min_fract) != min_fract:
+    min_fract *= 10
 
-def diff():
-    max_fract = 0
-    min_fract = 1
-    for i in getlist:
-        buf = round(i % 1, 2)
-        if buf > max_fract:
-            max_fract = buf
-        elif buf < min_fract:
-            min_fract = buf
-    while int(max_fract) != max_fract:
-        max_fract *= 10
-    while int(min_fract) != min_fract:
-        min_fract *= 10
+res = (round((max_fract - min_fract), 2))
+print(f"max {max_fract}, min {min_fract}")
 
-    res = (round((max_fract - min_fract), 2))
-    # print(f"max {max_fract}, min {min_fract}")
-    return res
-
-
-print(diff())
+print(res)
