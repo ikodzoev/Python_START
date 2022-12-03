@@ -8,3 +8,13 @@
 [1, 1, 2, 3, 3, 4, 5, 5, 6, 7, 7, 8, 9, 9]
 [2, 4, 6, 8]
 """
+
+# getlist = input('Введите список чисел, разделённых пробелом: ').split()
+getlist = [1, 1, 2, 3, 3, 4, 5, 5, 6, 7, 7, 8, 9, 9]
+# print(getlist)
+new_getlist = []
+for i in getlist:
+    if getlist.count(i) == 1:
+        new_getlist.append(i)
+print(new_getlist)
+
