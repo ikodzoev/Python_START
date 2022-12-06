@@ -4,3 +4,6 @@
 Ввод: значение типа <str>
 Вывод: значение типа <str>
 """
+s = input('Введите любой текст: ')
+result = list(filter(lambda str_: all(c not in str_ for c in 'АБВабв'), s.split()))
+print(' '.join(result))
