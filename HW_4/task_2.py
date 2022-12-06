@@ -17,4 +17,3 @@ for i in getlist:
     if getlist.count(i) == 1:
         new_getlist.append(i)
 print(new_getlist)
-
