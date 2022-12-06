@@ -18,7 +18,7 @@ k = int(input('Введите натуральное число k:'))
 
 max_num = 100
 
-ratio = [randint(0, max_num) for i in range(k)] + [randint(1, max_num)]
+ratio = [randint(0, max_num) for i in range(k+1)]
 polynom = '+'.join([f'{(j, "")[j == 1]}x^{i}' for i, j in enumerate(ratio) if j][::-1])
 
 polynom = polynom.replace('x^1+', 'x+')
