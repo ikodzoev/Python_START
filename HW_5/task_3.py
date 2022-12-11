@@ -64,7 +64,7 @@ def start_game(board, symbol_1, symbol_2, count):
 
     # проверка на выход ячейки за рамки игровой таблицы:
     while (row > 2 or row < 0) or (column > 2 or column < 0):
-        out_game(row, column)
+        out_game()
         row = int(input('Выберите строку [верхнюю:'
                         '[введите 0, среднюю: введите 1, нижнюю: введите 2]:'))
         column = int(input('Выберите столбец:'
@@ -72,7 +72,7 @@ def start_game(board, symbol_1, symbol_2, count):
 
         # проверка на заполненность клетки:
     while (board[row][column] == symbol_1) or (board[row][column] == symbol_2):
-        illegal(board, symbol_1, symbol_2, row, column)
+        illegal()
         row = int(input('Выберите строку [верхнюю:'
                         '[введите 0, среднюю: введите 1, нижнюю: введите 2]:'))
         column = int(input('Выберите столбец:'
@@ -102,16 +102,13 @@ def full_fill(board, symbol_1, symbol_2):
                 print('Ничья победила. ')
 
         # проверка наличия победителя:
-        winner = is_winner(board, symbol_1, symbol_2, count)
+        winner = is_winner(board, symbol_1, symbol_2)
         count += 1
     if not winner:
         print('Игра окончена.')
 
-    # сводка результатов игры
-    report(count, winner, symbol_1, symbol_2)
 
-
-def out_game(row, column):
+def out_game():
     # Предупреждение о выходе за пределы игровой таблицы:
     print('Вы вышли за пределы поля. Укажите другую клетку. ')
 
@@ -119,7 +116,6 @@ def out_game(row, column):
 def print_tab(board):
     # Вывод в консоли игровой таблицы:
     rows = len(board)
-    cols = len(board)
     print('---+---+---')
     for r in range(rows):
         print(board[r][0], ' |', board[r][1], '|', board[r][2])
@@ -127,7 +123,7 @@ def print_tab(board):
     return board
 
 
-def is_winner(board, symbol_1, symbol_2, count):
+def is_winner(board, symbol_1, symbol_2):
     # Проверка, выигрывает ли победитель
     winner = True
     # проверка строк:
@@ -169,11 +165,13 @@ def is_winner(board, symbol_1, symbol_2, count):
     return winner
 
 
-def illegal(board, symbol_1, symbol_2, row, column):
+def illegal():
     print('Выбранная клетка уже заполнена. Выберите другую.')
 
 
 def report(count, winner, symbol_1, symbol_2):
+
+    # сводка результатов игры
     print('\n')
     input('Нажмите enter, чтобы просмотреть результат игры. ')
     if winner is False and (count % 2 == 1):
