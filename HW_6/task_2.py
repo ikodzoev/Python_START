@@ -13,3 +13,24 @@
 [1, 3, 5]
 [1, 2, 5, 3, 10]
 """
+lst = [1, 2, 3, 5, 1, 5, 3, 10]
+# # Первый вариант:
+n = [int(i) for i in lst]
+uniq_nums = []  # первый список
+repeat_nums = []  # второй список
+norepeat_nums = []  # третий список
+for i in n:
+    if n.count(i) <= 1 and i not in uniq_nums:
+        uniq_nums.append(i)
+    if n.count(i) > 1 and i not in repeat_nums:
+        repeat_nums.append(i)
+    if n.count(i) >= 1 and i not in norepeat_nums:
+        norepeat_nums.append(i)
+
+print(uniq_nums)
+print(repeat_nums)
+print(norepeat_nums)
+# # Второй вариант с помощью множеств:
+print(list(n for n in set(lst) if lst.count(n) <= 1))
+print(list(n for n in set(lst) if lst.count(n) > 1))
+print(list(n for n in set(lst) if lst.count(n) >= 1))
