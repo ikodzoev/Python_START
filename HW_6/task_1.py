@@ -10,9 +10,12 @@
 import numexpr as calc
 import re
 
-operations = {"^": lambda a, b: str(float(a) ** float(b)), "*": lambda a, b: str(float(a) * float(b)),
-              "/": lambda a, b: str(float(a) / float(b)), "+": lambda a, b: str(float(a) + float(b)),
-              "-": lambda a, b: str(float(a) - float(b)), "%": lambda a, b: str(float(a) % float(b))}
+operations = {"^": lambda a, b: str(float(a) ** float(b)),
+              "/": lambda a, b: str(float(a) / float(b)),
+              "*": lambda a, b: str(float(a) * float(b)),
+              "+": lambda a, b: str(float(a) + float(b)),
+              "-": lambda a, b: str(float(a) - float(b)),
+              "%": lambda a, b: str(float(a) % float(b))}
 
 priority_re = r"\((.+?)\)"
 operations_re = r"(-?\d+(?:\.\d+)?)\s*\{}\s*(-?\d+(?:\.\d+)?)"
