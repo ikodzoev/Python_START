@@ -1,0 +1,52 @@
+{
+  "last_id": {
+    "id": 4
+  },
+  "items": [
+    {
+      "id": 1,
+      "first_name": "Иван",
+      "last_name": "Захарченко",
+      "birthday": "02.03.1983",
+      "workplace": "безработный",
+      "phone_number": [
+        "+71234568944",
+        "+78945624526",
+        "+71785126925"
+      ]
+    },
+    {
+      "first_name": "Вася",
+      "last_name": "Пупкин",
+      "phone_number": [
+        "777",
+        "555",
+        "666"
+      ],
+      "birthday": "14,36,25",
+      "workplace": "яяяяяяя",
+      "id": 2
+    },
+    {
+      "first_name": "Маша",
+      "last_name": "Петрова",
+      "phone_number": [
+        "7777"
+      ],
+      "birthday": "23,06,1999",
+      "workplace": "не работает",
+      "id": 3
+    },
+    {
+      "first_name": "Петр",
+      "last_name": "Иванов",
+      "phone_number": [
+        "777",
+        "888"
+      ],
+      "birthday": "22,03,66",
+      "workplace": "Слесарь",
+      "id": 4
+    }
+  ]
+}
