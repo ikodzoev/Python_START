@@ -21,7 +21,7 @@ def start():
     #             model.add_data(view.editor(model.get_data_id(view.request_id())))
     #         case 4:
     #             view.print_book(model.get_data_last_name(view.request_last_name()))
-    bot_token = "5850359754:AAEU52LCv-L0XuvLX50QcDrI-hOPX5eTBJc"
+    bot_token = "PLACE YOUR TOKEN HERE"
     app = ApplicationBuilder().token(bot_token).build()
 
     app.add_handler(CommandHandler("start", view.greetings))
