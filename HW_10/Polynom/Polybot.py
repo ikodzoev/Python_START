@@ -54,8 +54,8 @@ def poly_genium():
 
 
 poly_genium()
-
-app = ApplicationBuilder().token("5850359754:AAEU52LCv-L0XuvLX50QcDrI-hOPX5eTBJc").build()
+bot_token = "PLACE YOUR TOKEN HERE"
+app = ApplicationBuilder().token(bot_token).build()
 
 app.add_handler(CommandHandler("start", hello))
 app.add_handler(CommandHandler("poly", poly))
